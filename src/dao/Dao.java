@@ -1,6 +1,6 @@
 package dao;
 
-import banco.FabricaDeConexao;
+import database.FabricaDeConexao;
 import model.Model;
 import utils.Campo;
 import utils.Tipo;
