@@ -4,13 +4,14 @@ import dao.Dao;
 import model.Model;
 
 public abstract class Controller {
-    private Model model;
-    private Dao dao;
+    protected Model model;
+    protected Dao dao;
 
-    public Controller (Model model, Dao dao) {
-        this.model = model;
-        this.dao = dao;
+    public Controller () {
+        inicializaController();
     }
+
+    protected abstract void inicializaController();
 
     protected abstract Model criarModelAPartirDeUmArrayDeStrings(String[] dados);
 

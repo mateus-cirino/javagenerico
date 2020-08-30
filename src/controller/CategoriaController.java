@@ -1,12 +1,13 @@
 package controller;
 
-import dao.Dao;
+import dao.CategoriaDao;
 import model.Categoria;
 import model.Model;
 
 public class CategoriaController extends Controller{
-    public CategoriaController(Model model, Dao dao) {
-        super(model, dao);
+    protected void inicializaController() {
+        this.model = new Categoria();
+        this.dao = new CategoriaDao();
     }
 
     protected Model criarModelAPartirDeUmArrayDeStrings(String[] dados) {
